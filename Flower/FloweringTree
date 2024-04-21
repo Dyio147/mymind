@@ -105,13 +105,6 @@ class FloweringTree:
         self.turtle.forward(BRANCH_LENGTH)
         self.turtle.up()
 
-
-    def signature(self):
-        start_pos = self.turtle.pos()
-        self.turtle.color('sienna')
-        self.turtle.write("Made with ❤ by Justin Lee!", font=("Futura", 16, "normal"))
-        self.turtle.goto(start_pos)
-
     def draw(self):
         try:
             self.turtle.left(90)
@@ -120,7 +113,6 @@ class FloweringTree:
             self.petal_count = self.petal_count // (int(sqrt(2 * MAGIC)))
             self.petal_field(self.petal_count, self.petal_left_border, self.petal_right_border)
             self.turtle.backward(100)
-            self.signature()
             self.turtle.color('wheat')
             self.turtle.down()
             self.turtle.forward(20)
